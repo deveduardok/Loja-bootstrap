@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Loja do Zé</title>
+    <style>
+        .bggradient{
+        background: linear-gradient(55deg, red, black);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--COLOCAREI UM HEADER, UMA SECTION QUE TERA UM CARROUSEL COM ALGUMAS FOTOS, 
+        EMBAIXO TERÁ OUTRA SECTION DE APRESENTACAO DE ALGUNS PRODUTOS E POR ULTIMO O FOOTER.
+        O header terá navbar, no site vamos em components>navbar>Brand> vou pegar a navbar mais simples,
+        vou copiar a parte de cima e colar dentro do header, salva e já aparece no navegador,
+        bg quer dizer background, posso colocar 'dark' e na tag <a> 'text-white' pra letra branca,
+        Escrevo na tag <a> 'quitanda', crio uma tag pra img logo, 
+        no src da tag coloco url de um site que gera img aleatorias, 
+        vou colocar uma class na img para ela ficar redonda.
+        Vou criar links prontos, no site bootst>navs, vou copiar td o 1ºexemplo lá,
+        e colocarei dentro da minha tag nav e div, usarei 2 links só: home e prods
+        Ele já cria um alinhamento na horizontal e na vertical por padrão para toda a div dentro da nav. 
+        Se por ex, quero deixar a img e o titulo de uma lado e os links do outro, faço uma div para só os dois.
+        Perceba que o titulo ficou mt perto da img, tenho class prontas para fazer padding e margin
+        coloco um 'mr-3'=margin right dentro da class da img para ter um espaço entre o titulo.
+        Vou colocar 'text-white' na class dos links.
+        Colocaremos um carousel, este vai sumir e aparecer >> copia no site, eh do tipo 'crossfade', 
+        vou colar dentro da section, preciso colocar as fotos do carousel, no src vou usar a msm url,
+        na url colocarei o tamanho de 1400x500 e as respect frutas.
+        Vou tirar os controles/setas do carousel, tirarei as tags de botoes
+        Na outra section vou usar o grid para colocar os produtos.
+        **se vc ñ conhece de grid de uma estudada no site do bootstrap sobre GRID, é preciso
+        de uma class container, row(linha), col(colunas), cada linha pode ter no max 12 colunas e a
+        responsividade eh proporcional ao tamanho de tela.
+        Criarei 3 divs, uma pro container, row e coluna('col-sm-12')>> ocupa tds as 12colunas,
+        text-center = centralizar, my-3 =espaç eixo y (vert) de 3
+        Vou procurar no site 'cards' pra alinhar as fotos, vou pegar o 1ºex e copio
+        uma row pode ter no max 12 colun, se temos 3 prods, cada col tem 4 espaços.
+        copio e colo 3x para os 3 cards/produtos todos dentro da div da row.
+        uso o mesmo link para pegar as fotos do site e jogo no img src, vou colocar img 300x200 pra caber bem no card
+        Coloco o titulo de acordo com a fruto e escreve 'comprar' no botao azul em tds
+        Preciso alinhar o titulo 'Produtos' com os 3 cards, vou tirar a propr 'width' dos cards
+        Vou trocar o tipo dos botões, entro no site > buttons > colocarei 'outline-warning' inves de 'primary'
+        Agora vou pro footer, crio div container-fluid(s/margem) , div row e div col sm-12. 
+        coloco bg black igual do navbar, colocarei uma margem botton(mb-5) do container para o footer
+        ponho 'text-white' na class do col do footer, colocarei padding de 4,
+
+        Acima, vou colocar um degrade na navbar, assim vou criar uma tag style, classe bggradient embaixo do title e depois chama la
+
+
+    
+    -->
+    <header>
+        <nav class="navbar navbar-light bggradient">
+            <div class="container-fluid">
+                <div>
+                    <img class='rounded-circle mr-3' src='https://source.unsplash.com/70x70/?pepper' alt='Logo da loja'>
+                    <a class="navbar-brand text-white" href="#">Magazine Heloisa</a>
+                </div>
+                <ul class="nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Produtos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <section>
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://source.unsplash.com/1400x500/?refrigerator" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://source.unsplash.com/1400x500/?clock" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://source.unsplash.com/1400x500/?laptop" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+              </a>
+
+        </div>
+ 
+    </section>
+    <section>
+        <div class='container mb-5'>
+            <div class='row'>
+                <div class='col-sm-12 text-dark text-center my-3'>
+                    <h1>Produtos</h1>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-sm-4'>
+                    <div class="card" >
+                        <img src="https://source.unsplash.com/300x200/?refrigerator" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Geladeira</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-danger">Comprar</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class='col-sm-4'>
+                    <div class="card" >
+                        <img src="https://source.unsplash.com/300x200/?laptop" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Laptop</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-danger">Comprar</a>
+                        </div>
+                      </div>
+                </div>
+
+
+                <div class='col-sm-4'>
+                    <div class="card" >
+                        <img src="https://source.unsplash.com/300x200/?clock" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Relógio</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-danger">Comprar</a>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+          
+       </div>
+
+    </section>
+    <footer>
+        <div class='container-fluid bg-dark p-4'>
+            <div class='row'>
+                <div class='col-sm-12 text-white text-center'>
+                    <p class='mb-0'>Desenvolvido por Eduardok</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
